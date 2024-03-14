@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/dm-sans": "^0.2.3",
     "axios": "^1.6.7",
     "expo": "~50.0.13",
     "expo-constants": "~15.4.5",
