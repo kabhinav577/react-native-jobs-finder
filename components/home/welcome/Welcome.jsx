@@ -20,13 +20,14 @@ const jobTypes = [
   'Internship',
 ];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState('Full-time');
+
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hi" I'm Abhinav</Text>
+        <Text style={styles.userName}>Hello I'm Abhinav</Text>
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
 
@@ -34,12 +35,12 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=""
+            value={searchTerm}
             placeholder="What are you looking for?"
-            onChangeText={() => {}}
+            onChangeText={(text) => setSearchTerm(text)}
           />
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
             resizeMode="contain"
